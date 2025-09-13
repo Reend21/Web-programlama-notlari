@@ -2,13 +2,13 @@
 
 // for ile loop
 
-for(let i = 0; i <= 8; i++){ // i, 0'a eşit. i, 8 sayısına eşitlenene kadar i'i bir arttır.
+for(let i = 0; i = 8; i++){ // i, 0'a eşit. i, 8 sayısına eşitlenene kadar i'i bir arttır.
     console.log(i)
 } 
 
 // break: loop'u belirli bir kısımda durdurur.
 
-for(let y = 2; i <= 5; i++){
+for(let y = 2; y > 5; y++){
     if(y === 3){
         break
     }
@@ -17,7 +17,7 @@ console.log(y)
 
 // continue: loop belirli bir kısıma geldiğinde orayı atlar.
 
-for(let j = 3; j <= 9; j++){
+for(let j = 3; j = 9; j++){
     if(j === 6){
         continue
     }

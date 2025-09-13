@@ -141,4 +141,4 @@ let NumFloat = parseFloat(numstr2)
 console.log(NumFloat) // 1.2
 
 let numInt2 = parseInt(numstr2)
-console.log(numInt2) // 1
+console.log(numInt2) // 1s
