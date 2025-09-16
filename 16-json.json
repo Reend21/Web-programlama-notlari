@@ -1,0 +1,18 @@
+{
+    "takimlar":[ {
+        "İsim": "Manchester United",
+        "kuruluşTarihi": 1878,
+        "ligi": "Premier Lig"
+    },
+    {
+        "İsim": "Real Madrid",
+        "kuruluşTarihi": 1902,
+        "ligi": "LaLiga"
+    },
+    {
+        "İsim": "AC Milan",
+        "kuruluşTarihi": 1899,
+        "ligi": "Seria A"
+    }
+    ]
+}
