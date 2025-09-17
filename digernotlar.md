@@ -1,0 +1,1 @@
+# Bu not dosyası karışıktır. Ordan buradan öğrendiğim web teknolojileri ile ilgili her türlü notu buraya ekleyeceğim.
