@@ -77,3 +77,29 @@ extraDivs.forEach((div, i) => {
     div.style.color = '#141414ff'
   }
 })
+
+// .createElement | HTML Elementi oluşturmamızı sağlar.x
+
+let headText = document.createElement("h1")
+headText.className("classified")
+headText.fontSize("32px")
+headText.textContent("Bunu dom ile oluşturdum ha!")
+
+// Çoklu element oluşturmak için tahmin edin ne kullanıyoruz?
+
+let title2
+for (let o = 0; o < 3; o++) {
+  title = document.createElement('h1')
+  title.className = 'title'
+  title.style.fontSize = '24px'
+  title.textContent = o
+console.log(title2)
+}
+
+// appendChild | Elementi başka bi elementin çocuğu yapar.
+
+document.body.appendChild(title2)
+
+// removeChild | Çocuk elementi siler.
+
+document.removeChild(titles2)
