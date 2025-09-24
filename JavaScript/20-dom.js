@@ -103,3 +103,37 @@ document.body.appendChild(title2)
 // removeChild | Çocuk elementi siler.
 
 document.removeChild(titles2)
+
+// Event Listeners | JavaScript üzerinde kullanıcıların belirli işlemleri yapıp yapmadığını dinlemek için bunları kullanırız.
+
+// Click
+
+const btn = document.getElementsByClassName("btn")
+btn.addEventListener("click", e => {
+  console.log("TIKLADIN!!!")
+})
+
+// Double Click
+
+const btn2 = document.getElementsByClassName("btn")
+btn.addEventListener("dbclick", w => {
+  console.log("DoubleCLİCK")
+})
+
+// Diğer event dinleyicileri:
+/*
+    click - öğeye tıklandığında
+    dblclick - öğeye çift tıklandığında
+    mouseenter - fare imleci öğeye girdiğinde
+    mouseleave - fare imleci öğeden çıktığında
+    mousemove - fare imleci öğe üzerinde hareket ettiğinde
+    mouseover - fare imleci öğe üzerinde hareket ettiğinde
+    mouseout - fare imleci öğeden çıktığında
+    input - değer giriş alanına girildiğinde
+    change - değer giriş alanında değiştiğinde
+    blur - öğe odaklanmadığında
+    keydown - bir tuş basıldığında
+    keyup - bir tuş bırakıldığında
+    keypress - herhangi bir tuşa basıldığında
+    onload - tarayıcı bir sayfayı yüklemeyi bitirdiğinde
+*/
