@@ -27,10 +27,20 @@
     <script src="17-web-storage.js"></script>
     <script src="18-promises.js"></script>
     <script src="19-closures.js"></script>
+    <script src="20-dom.js"></script>
     <script src="21-element.js"></script>
 -->
-    <script src="20-dom.js"></script>
+    <script src="22-element-elemanlari.js" defer></script>
+    <style>
+        .scroll-content1 {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
 
+        .scroll-content2 {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
@@ -41,8 +51,59 @@
     <div class="baskabirdiv"></div>
     <input div="btn" type="button" value="">
     <input type="text" value="">
-    <ul>
+    <ul class="element">
+        <li class="delete-btn">Liste1</li>
+        <li class="delete-btn">Liste2</li>
+        <li class="delete-btn">Liste3</li>
+        <li class="delete-btn">Liste4</li>
+        <li class="delete-btn">Liste5</li>
     </ul>
-    
+
+    <div class="attributes" id="rA" style="color:aqua; background-color: red;"></div>
+
+<div class="widthHeightTest" style="padding: 25px; border: 30px solid rgb(0, 236, 43)">
+  <div>bir ki üç dört</div>
+  <div style="padding: 10px">eleman 2</div>
+  <div>beş altı yedi sekiz</div>
+</div>
+
+<div class="scroll-content1" style="height: 70px; overflow: auto">
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+</div>
+
+<button id="scroll-down">Aşağı kaydır</button>
+<button id="scroll-up">Yukarı kaydır</button>
+
+<hr>
+
+<div class="scroll-content2" style="width: 200px; display: flex; white-space: nowrap; overflow: auto">
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+</div>
+
+<button id="scroll-left">Sola Kaydır.</button>
+<button id="scroll-right">Sağa Kaydır.</button>
+
+<div class="after-before">Thunderbird</div>
+
+<div class="closestHTML">
+    <div class="h1close"></div>
+    <div class="h2far"></div>
+</div>
+
 </body>
 </html>
