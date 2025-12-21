@@ -39,6 +39,9 @@
         .scroll-content2 {
             scroll-behavior: smooth;
         }
+        .active {
+      background: yellow;
+  }
     </style>
 </head>
 <body>
@@ -139,7 +142,33 @@
 
 <div class="style-dec">SAAAA</div>
 
-    <script src="22-cesitli.js"></script>
+<form action="form.html" id="form1" novalidate>
+    <input type="text" required> <br>
+    <input type="password" required name=""> <br>
+    <input type="email" required name=""> <br>
+    <textarea name=""></textarea> <br>
+    <input type="button" id="submit-btn" value="Gönder">
+    <input type="submit" value="Submit">
+    <input type="button" id="reset-btn" value="Sıfırla">
+</form>
+
+    <hr>
+
+<button id="event">Eventle beni</button>
+
+<div id="tab">
+  <nav>
+    <button>tab 1</button>
+    <button>tab 2</button>
+  </nav>
+  <div>
+    <section>content 1</section>
+    <section>content 2</section>
+  </div>
+</div>
+
+ <script src="22-cesitli.js"></script>
+
 
 </body>
 </html>

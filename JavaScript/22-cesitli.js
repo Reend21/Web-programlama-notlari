@@ -128,3 +128,135 @@ filebtn.addEventListener("click", () => {
   file.showPicker()
 })
 
+// ? elements | HTML'deki form elemanlarının tamamını almamızı sağlar.
+
+const form1 = document.getElementById("form1")
+
+console.log(form1.elements)
+
+// ? forms | Tüm form elemanlarını görür, istenilen veya tüm formları döndürür.
+
+console.log(document.forms)
+console.log(document.forms.form1)
+
+// ? submit | Form elemanı gönderilirken özelleştirmeyi sağlar.
+
+const submitBut = document.getElementById("submit-btn")
+submitBut.addEventListener("click", () => {
+  setTimeout(() =>
+      document.forms.form1.submit()
+   , 1000)
+
+})
+
+// ? reset | Form elemanlarının içeriğini temizler.
+
+const resetBut = document.getElementById("reset-btn")
+resetBut.addEventListener("click", () => {
+  document.forms.form1.reset()
+})
+
+// ? validity | Form elemanının geçerli olup olmadığını kontrol eder.
+// ? setCustomValidity ve reportValidity | Validasyon için özel mesaj tanımlamamızı sağlar. 
+// ? checkValidity | Form öğresinin geçerli olup olmadığını döndürür.
+
+function checkValidity(element) {
+		if (element.validity.badInput) {
+			element.setCustomValidity('Geçersiz değer adamım!')
+		} else if (element.validity.patternMismatch) {
+			element.setCustomValidity('Geçersiz Format')
+		} else if (element.validity.rangeUnderflow) {
+			element.setCustomValidity('Minimum değerden daha az')
+		} else if (element.validity.rangeOverflow) {
+			element.setCustomValidity('Minimum değerden daha fazla')
+		} else if (element.validity.stepMismatch) {
+			element.setCustomValidity('Adımda bir sıkıntı var')
+		} else if (element.validity.tooLong) {
+			element.setCustomValidity('Çok uzun be gardaş')
+		} else if (element.validity.tooShort) {
+			element.setCustomValidity('Bu da çok kısa kaldı')
+		} else if (element.validity.typeMismatch) {
+			element.setCustomValidity('Tipsiz misin biraz?')
+		} else if (element.validity.valueMissing) {
+			element.setCustomValidity('Buralar hep dutluk!')
+		} else {
+			element.setCustomValidity('')
+		}
+		element.reportValidity()
+  }
+
+	form1.addEventListener('submit', e => {
+		e.preventDefault();
+		[...e.target.elements].forEach(element => {
+			console.log(element.validity)
+		})
+	})
+
+document.forms.form1.addEventListener('submit', e => {
+		[...document.forms.form1.elements].reverse().forEach(element => {
+      e.preventDefault();
+			checkValidity(element)
+      // elemanın kontrolünü anlık olarak yapmaya devam et
+      element.addEventListener('input', function(e) {
+				checkValidity(e.target)
+      })
+
+    })
+    if (e.target.checkValidity()) {
+      e.target.submit
+    }
+})
+
+// ? Event ve eventDispatch | Bir olayı simüle etmek için bu fonksiyon kullanılır.
+// ? isTrusted | Bir olayın kullanıcı tarafından mı yoksa otomatik yani programatik olarak mı gerçekleştiğini döndürür.
+
+const eventBtn = document.getElementById("event")
+
+eventBtn.addEventListener("click", e => {
+  if (e.isTrusted) {
+    console.log("Kullanıcı etkinliği")
+  } else {
+    console.log("bot etkinliğ")
+  }
+  console.log("butona tıklandı beybi")
+})
+
+eventBtn.dispatchEvent(new Event("click"))
+
+// ? customEvent() | Önceden tanımlı olaylar yerine özel olayları tetikleyebiliriz.
+const tab = document.getElementById('tab')
+  const items = tab.querySelectorAll('nav button')
+  const contents = tab.querySelectorAll('section')
+
+  // ilk elemana active classi ekleyelim
+  items[0].classList.add('active');
+
+  // ilk eleman haric digerlerini gizleyelim
+  [...contents].filter((item, key) => key !== 0).forEach(content => content.style.display = 'none')
+
+  // tab degistirme
+  items.forEach((item, index) => item.addEventListener('click', e => {
+		items.forEach((item, i) => {
+			if (i === index) {
+				item.classList.add('active')
+      } else {
+				item.classList.remove('active')
+      }
+    })
+    contents.forEach(content => content.style.display = 'none')
+    contents[index].style.display = 'block'
+
+    // tabChanged adinda ozel bir olay tetikleyelim
+    tab.dispatchEvent(
+			new CustomEvent('tabChanged', {
+				detail: {
+					tab: index
+				}
+			})
+    )
+  }))
+
+  // ozel olayi dinleyelim
+  tab.addEventListener('tabChanged', e => {
+		console.log('tab degisti', e.detail)
+  })
