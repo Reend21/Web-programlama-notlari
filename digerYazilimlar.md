@@ -1,4 +1,9 @@
 # Buraya orda burda sıkça gördüğüm yazılımların ne işe yaradığını not alacağım
-# Meson | 2012'de Jussi Pakkanen tarafından geliştirilen bir build systemdir. C, C++, Rust ve Python gibi çok çeşitli şeylerle çalışır ve derleyici ile kaynak kod arasında bir köprü görevi görür. Çok hızlı, build dosyasının okunabilir olması, kolay syntax ve basit olması popüler bir build system olmasını sağladı. GNOME'dan sonra da asıl popülerliği arttı. Cmake gibi alternatiflerine kıyasla da oldukça hızlı, kolay ve debuggingi kolaydır. Ninja adında hızlı ve kolay kullanımlı bir derleyici çağrıcısı kullanır.
 
-# YAML | 
+**Meson** | 2012'de Jussi Pakkanen tarafından geliştirilen bir build systemdir. C, C++, Rust ve Python gibi çok çeşitli şeylerle çalışır ve derleyici ile kaynak kod arasında bir köprü görevi görür. 
+
+Çok hızlı, build dosyasının okunabilir olması, kolay syntax ve basit olması popüler bir build system olmasını sağladı. GNOME'dan sonra da asıl popülerliği arttı.
+
+Cmake gibi alternatiflerine kıyasla da oldukça hızlı, kolay ve debuggingi kolaydır. **Ninja** adında hızlı ve kolay kullanımlı bir derleyici çağrıcısı kullanır.
+
+**YAML** | 
