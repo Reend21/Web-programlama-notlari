@@ -132,6 +132,7 @@ Bu kodlar, bağlantının hangi aşamada olduğunu gösterir.
 | OPTIONS | Sunucunun hangi metodları desteklediğini öğren. |
 | CONNECT | Proxy üzerinden tünel (tunnel) bağlantısı kur. |
 | TRACE | İsteğin sunucuya ulaşana kadar geçtiği yolu göster (debug). |
+| Query | Salt Okunur ve sadece veri okur ama aynı zamanda önbelleklenebilir. |
 
 ---
 
