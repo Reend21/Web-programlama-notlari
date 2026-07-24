@@ -40,6 +40,8 @@ a = "Merhaba!" // Yeniden atadık, artık a number yerine string verisini tutuyo
 
 // Neyse çok uzattık, hata ayıklamaya geçelim.
 // JS try-catch-finally metoduyla hataları ayıklar.
+// ! Dip not: try-catch ikilisi özellikle node.js'te kullanılırken sadece kontrolün sizde olmadığı hatalar (sunucu patlaması vs.) halledilirken kullanılmalı.
+// ! Kontrolün kullanıcıda olduğu form validasyonu vs. gibi durumlar için if else genellikle daha mantıklıdır.
 
 try {
     console.warn("deneme 1, düt, düt.")
