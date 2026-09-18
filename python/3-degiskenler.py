@@ -49,6 +49,17 @@ print(ccc)
 print(ddd)
 print(eee)
 
+# Değişkenler aynı print fonksiyonunda virgül veya + operatörü ile ayrılarak kullanılabilir. Ancak string ve number veri tipleri + operatörü ile birleştirilemez.
+
+print(eee,ddd)
+print(aaa,ccc)
+print(bbb,aaa)
+
+# Bir fonksiyon içerisinde tanımlanan değişken sadece fonksiyon içinden erişilebilir.
+# Bir fonksiyon içeriisinde tanımlanmayan değişkenler tüm kodda kullanılabilir. 
+# Bir fonksiyon içerisinde tanımlanmış değeri her yerden erişmek için başına global getirmeliyiz.
+# Aynı değişken hem fonksiyon içi hem dışında tanımlıysa fonksiyon içi önceliklidir.
+
 # ! Değişken tanımlanırken uyulması gereken kurallar:
 # Değişkenler sadece _ veya harf ile başlayabilir
 # Değişkenlerde sadece alfanumerik (Az 0-9) karakterler kullanılabilir
