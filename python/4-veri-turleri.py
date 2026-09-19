@@ -32,7 +32,7 @@ dictVar = {"isim": "mehmet", "yaş": "yetmiş"}
 setVar = {"Bir", "iki"} # kısacası obje ama key value ikili değeri yerine sadece tek değer var.
 frozenSetVar = frozenset({"merhaba", "selam"}) # bu setle aynı ama kodda sonradan değiştirmek için ekstra işlem gerektirir.
 
-# boolean tipler - boolean types - true & false
+# boolean tipler - boolean types - true & false (bool)
 
 boolVar=True # veya false, boolean işte. olumlu (true) ve olumsuz (false) değerlerini işlemek için kullanılır.
 
@@ -48,3 +48,5 @@ bytesArrVar = bytearray([21]) # ascii karakter diziliminde 21 sayısına denk ge
 memViewVar = memoryview(bytes(44)) # 44 değeri memoryde hangi adreste tutuluyor
 
 print(memViewVar)
+
+# ayrıca set() veya veri tipinin ismi ile fonksiyonun içine yazacağımız veri tipini kendi veri tipine benzer veri tiplerine dönüştürebiliriz. Üstte örneğini verdik ve tüm veri tipi gruplarında iş görüyor.
